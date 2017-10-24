@@ -3,7 +3,7 @@
  *
  *       Filename: sample.cpp
  *        Created: 10/23/2017 10:10:43
- *  Last Modified: 10/23/2017 10:11:27
+ *  Last Modified: 10/23/2017 15:21:08
  *
  *    Description: 
  *
@@ -18,10 +18,13 @@
  * =====================================================================================
  */
 
+#include <cstdio>
 #include "gdbtrace.h"
+
 int f(int)
 {
     __gdbtrace_record(nullptr);
+    std::printf("after\n");
     return 0;
 }
 
